@@ -1,6 +1,6 @@
 package main.java.model;
 
-public class Heap {
+public class HeapSort {
 
     public void HeapSort(int v[]){
         // build the heap
