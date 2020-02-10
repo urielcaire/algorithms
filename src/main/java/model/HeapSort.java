@@ -2,7 +2,7 @@ package main.java.model;
 
 public class HeapSort {
 
-    public void HeapSort(int v[]){
+    public void heapSort(int v[]){
         // build the heap
         build(v);
 
