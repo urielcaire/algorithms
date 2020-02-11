@@ -12,7 +12,7 @@ public class MergeSort {
      * @param v a vector to sort
      * @return sorted vector v
      */
-    public int[] sort(int[] v){
+    public int[] mergeSort(int[] v){
         this.array = v;
         this.aux = new int[array.length];
 

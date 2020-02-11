@@ -7,7 +7,7 @@ public class MergeMain {
         int v[] = {12, 11, 13, 5, 6, 7};
 
         MergeSort msort = new MergeSort();
-        msort.sort(v);
+        msort.mergeSort(v);
 
         for (int i = 0; i < v.length; i++)
             System.out.print(v[i]+" ");
