@@ -14,6 +14,7 @@ public class QuickSort {
     public int[] quickSort(int[] v){
         this.v = v;
         quickSort(0, v.length - 1);
+        //improvedQuickSort(0, v.length - 1);
         return this.v;
     }
 
@@ -28,6 +29,27 @@ public class QuickSort {
             int p = partition(l,h);
             quickSort(l, p - 1);
             quickSort(p + 1, h);
+        }
+    }
+
+    /**
+     * Receive the lowest and highest index of a piece of an
+     * array and apply quickSort only on the lower half of sub-array.
+     * This function will use less extra space in memory.
+     * @param l lowest index of a piece
+     * @param h highest index of a piece
+     */
+    private void improvedQuickSort(int l, int h){
+        while (l < h){
+            int p = partition(l,h);
+
+            if (p-l < h-p){
+                improvedQuickSort(l, p-1);
+                l = p+1;
+            }else{
+                improvedQuickSort(p+1, h);
+                h = p+1;
+            }
         }
     }
 
